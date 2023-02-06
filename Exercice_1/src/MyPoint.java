@@ -47,16 +47,19 @@ public class MyPoint {
 
 // distance en prenant en compte les coordonnées  entrez en parametre du constructeur
     public double distance(int x, int y){
-        return Math.sqrt(Math.pow((x-this.x), 2)+Math.pow((y-this.y), 2));
+        return Math.sqrt(Math.pow((this.x-x), 2)+Math.pow((this.y-y), 2));
     }
+
 
 // distance en prenant en compte un objet de type 
     public double distance(MyPoint point){
-        return Math.sqrt(Math.pow((point.getX()-this.x), 2)+Math.pow((point.getY()-this.y), 2));
+        return Math.sqrt(Math.pow((this.x-point.getX()), 2)+Math.pow((this.y-point.getY()), 2));
     }
+    
+
 // distance par defaut
     public double distance(){
-        return Math.sqrt(Math.pow(this.x, 2)+Math.pow(this.y, 2));
+        return Math.sqrt(Math.pow(this.x-x, 2)+Math.pow(this.y-y, 2));
     }
 
 }

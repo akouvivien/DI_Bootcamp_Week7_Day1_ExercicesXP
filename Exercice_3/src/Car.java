@@ -8,11 +8,9 @@ class Car extends Vehicle {
   
     }
 
-    public Car(String carName,String model, String speed) {
-        super(model, speed);
+    public Car(String string) {
         this.carName = carName;
     }
-
 
     public String getCarName() {
         return this.carName;
@@ -26,16 +24,9 @@ class Car extends Vehicle {
   
     // This function calls the Base class functions and appends the result with the input
     public String getDetails(String carName) {
-        return carName;
-          // calling Base Class Function
-    }
-
-    @Override
-    public String toString() {
         return "{" +
-            " carName='" + getCarName() + "'" +
-            "}";
+        " carName='" + carName + " Model='"  +getModel()+" Speed='"+getSpeed()+
+        "}";
     }
 
-  
   }
